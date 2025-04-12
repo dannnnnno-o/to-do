@@ -1,0 +1,211 @@
+@keyframes float{
+    0%   {top: 0rem;}
+    50%  {top: .5rem;}
+    100% {top: 0rem;}
+}
+
+:root{
+    font-family: Minecraft Regular;
+    background-color: var(--fairyTale);
+    --e9: #E9E9E9;
+    --Lilac:   #d383f8;
+    --lavenderWeb:   #DFD9E2;
+    --lavenderBlush: #EDE3E9;
+    --fairyTale: #EBC3DB;
+    --Wisteria: #C09BD8;
+    --eggshell: #E6E4CE;
+    --tomato: #FE4A49;
+    --pinkishNeon: #FF008C;
+}
+
+button, input, textarea{
+    font-family: Minecraft Regular;
+}
+
+h1{
+    font-size: 80px;
+    color: whitesmoke;
+    -webkit-text-stroke: .3px black;
+    text-align: center;
+}
+
+.container{
+    justify-content: center;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+
+
+.row{
+    font-size: 32px;
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+}
+
+.row > div{
+    animation: float 2s ease-in-out infinite;
+    position: relative;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem;
+    border-radius: 2rem;
+    background-color: var(--e9);
+    border: var(--pinkishNeon) solid 2px;
+    min-height: 75px;
+    box-shadow: 8px 9px #0000002c;
+}
+
+
+
+.row > div:nth-child(1){
+    width: 30%;
+}
+.row > div:nth-child(2){
+    width: 20%;
+}
+.row > div:nth-child(3){
+    width: 25%;
+}
+.row > div:nth-child(4){
+    width: 25%;
+}
+
+.addTask{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--Wisteria);
+    width: 260px;
+    height: 75px;
+    border-radius: 2rem;
+    font-size: 24px;
+    box-shadow: 6px 5px #00000015;
+    margin-top: 32px;
+    position: relative;
+    animation: float 2s infinite ease-in-out;
+    animation-delay: .5s;
+}
+
+.addTask:hover{
+    cursor: pointer;
+    transition: 1s;
+    background-color: var(--Lilac);
+    transform: scale(1.05);
+}
+
+#addedTask{
+    min-height: 153px;
+}
+
+#taskArea{
+    font-size: 20px;   
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    resize: none;
+    border: 1px solid var(--Lilac);
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+#taskArea:focus{
+    color: black;
+    outline: var(--Lilac) 1.5px solid;
+}
+
+#addedDifficulty, #addedDuration, #addedReward{
+    align-self: center;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#addedDifficulty{
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}  
+
+#range{
+    appearance: none;
+    width: 250px;
+    height: 15px;
+    border-radius: 2rem;
+}
+
+#range:focus{
+    outline: none;
+}
+
+#range::-webkit-slider-thumb{
+    cursor: pointer;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--pinkishNeon);
+    border-radius: 2rem;
+}
+#range::-webkit-slider-thumb:hover{
+    outline: var(--pinkishNeon) 2.5px solid;
+}
+
+#range{
+    background: linear-gradient(to right, #FF008C 50% , #fff 50%)
+}
+
+#duration{
+    font-size: 20px;
+    border-radius: 1rem;
+    border: 1px solid var(--Lilac);
+    text-align: center;
+    outline: none;
+}
+
+#duration:focus{
+    outline: 1.5px solid var(--Lilac);
+}
+
+#confirm{
+    font-size: 20px;
+    width: 125px;
+    height: 62.5px;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--Wisteria);
+}
+#confirm:hover{
+    cursor: pointer;
+    transition: 1s;
+    background-color: var(--Lilac);
+    transform: scale(1.1);
+}
+
+.appendTask  span{
+    justify-self: center;
+    align-self: center;
+    padding: 2rem;
+}
+
+ #primaryRow > div{
+    font-size: 36px;
+/*      color: crimson;
+   -webkit-text-stroke: .8px black; */
+    position: relative;
+    animation: float infinite ease-in-out 2s;
+    animation-delay: .2s;
+}
+
+input, textarea, button, #range::-webkit-slider-thumb{
+    box-shadow: 4px 5px rgba(0, 0, 0, 0.25);
+}
