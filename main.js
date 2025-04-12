@@ -3,6 +3,7 @@ function Reward(d, m){
     return ((d / 60) * 10) * m
 }
 
+addButton = document.querySelector(".addTask")
 
 /* Submitting a task */
 const container = document.querySelector(".container")
@@ -23,6 +24,7 @@ newTask.setAttribute("id", "addedTask")
 newTaskInput = document.createElement("textarea")
 newTaskInput.setAttribute("name", "task")
 newTaskInput.setAttribute("id", "taskArea")
+newTaskInput.setAttribute("autocomplete", "off")
 newTaskInput.setAttribute("placeholder", "Scream for 2 hours at school :D")
 
 newDifficulty = document.createElement("div")
@@ -45,7 +47,7 @@ newDurationInput.setAttribute("id", "duration")
 newDurationInput.setAttribute("type", "text")
 newDurationInput.setAttribute("title", "Duration in minutes")
 newDurationInput.setAttribute("placeholder", "Duration in minutes")
-newDurationInput.setAttribute("autocomplete", "off")
+newDurationInput.setAttribute("autofill", "off")
 
 newReward = document.createElement("div")
 newReward.setAttribute("id", "addedReward")
@@ -122,6 +124,8 @@ function addTask(){
 
     slider.style.background = 'linear-gradient(to right, #FF008C 50% , #fff 50%)';
 
+    addButton.setAttribute("class", "hide")
+
 }
 
 function Confirm(){
@@ -189,5 +193,7 @@ appendReward.setAttribute("class", "append appendReward")
     addedDuration.value = null
     addedDifficulty.value = null
     const slider = document.querySelector("#range")
+
+    addButton.setAttribute("class", "addTask")
 });
 }
