@@ -80,6 +80,8 @@ function addTask(){
         slider.style.background = 'linear-gradient(to right, #FF008C ' + valuePercent + '% , #fff ' + valuePercent + '%';
     }
 
+    var x = null
+
     slider.addEventListener('input', function(){
         calcValue()
         value.textContent = this.value;
@@ -87,11 +89,11 @@ function addTask(){
             value.textContent = "Easy :D"
         }
         else if(value.textContent <= 50){
-            value.textContent = "Moderate :3"
+            value.textContent = "Moderate :3"        
         }
         
         else if(value.textContent <= 75){
-            value.textContent = "Challenging!"
+            value.textContent = "Challenging!"       
         }
         
         else if(value.textContent <= 95){
@@ -162,27 +164,35 @@ appendReward.setAttribute("class", "append appendReward")
     appendTaskSpan.innerText = addedTask.value
 
     appendRow.append(appendDifficulty)
+
+    var x = null
+
     if (addedDifficulty.value <= 25){
     appendDifficulty.innerText = "Easy :D"
+    x = .75
     } 
     else if (addedDifficulty.value <= 50){
     appendDifficulty.innerText = "Moderate :3"
+    x = .9
     } 
     else if (addedDifficulty.value <= 75){
     appendDifficulty.innerText = "Challenging!"
+    x = 1
     } 
     else if (addedDifficulty.value <= 95){
     appendDifficulty.innerText = "Difficult..."
+    x = 1.2
     } 
     else if (addedDifficulty.value <= 100){
     appendDifficulty.innerText = "Impossible D:"
+    x = 1.5
     } 
 
     appendRow.append(appendDuration)
     appendDuration.innerText = addedDuration.value + " minutes"
 
     appendRow.append(appendReward)
-    appendReward.innerText = Reward(addedDuration.value, 1.5) + " minutes"
+    appendReward.innerText = Reward(addedDuration.value, x) + " minutes"
 
     append = document.querySelectorAll(".append")
     append.forEach(element => {
