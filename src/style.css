@@ -1,6 +1,6 @@
 @font-face {
     font-family: MinecraftRegular;
-    src: url('../assets/Minecraft.ttf');
+    src: url('../assets/Minecraft.otf');
 }
 
 @keyframes float{
