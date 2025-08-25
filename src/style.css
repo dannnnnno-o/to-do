@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Minecraft Regular;
+    font-family: MinecraftRegular;
     src: url('../assets/Minecraft.ttf');
 }
 
@@ -10,7 +10,7 @@
 }
 
 :root{
-    font-family: Minecraft Regular;
+    font-family: MinecraftRegular;
     background-color: var(--fairyTale);
     --e9: #E9E9E9;
     --Lilac:   #d383f8;
